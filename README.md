@@ -31,8 +31,7 @@ The Student Management System provides a complete CRUD API for managing student 
 ```
 src/main/java/com/company/sms/
 ├── controller/
-│   ├── StudentController.java    # REST API endpoints
-│   └── WelcomeController.java    # Welcome endpoint
+│   └── StudentController.java    # REST API endpoints
 ├── model/
 │   └── Student.java              # Student entity
 ├── repository/
@@ -71,12 +70,6 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 ```
 http://localhost:8080
 ```
-
-### Welcome Endpoint
-```
-GET /api/welcome
-```
-Returns a welcome message.
 
 ### Student Management Endpoints
 
