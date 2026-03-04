@@ -29,7 +29,7 @@ import com.company.sms.service.StudentService;
  * @version 1.0
  */
 @RestController
-@RequestMapping("/api/students")
+@RequestMapping("/api/v1/students")
 public class StudentController {
 
     @Autowired

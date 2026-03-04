@@ -75,11 +75,11 @@ http://localhost:8080
 
 | Method | Endpoint | Description | Request Body | Response |
 |--------|----------|-------------|--------------|----------|
-| GET | `/api/students` | Get all students | - | List of students |
-| GET | `/api/students/{id}` | Get student by ID | - | Student object or 404 |
-| POST | `/api/students` | Create new student | Student JSON | Created student (201) |
-| PUT | `/api/students/{id}` | Update student | Student JSON | Updated student or 404 |
-| DELETE | `/api/students/{id}` | Delete student | - | 204 No Content or 404 |
+| GET | `/api/v1/students` | Get all students | - | List of students |
+| GET | `/api/v1/students/{id}` | Get student by ID | - | Student object or 404 |
+| POST | `/api/v1/students` | Create new student | Student JSON | Created student (201) |
+| PUT | `/api/v1/students/{id}` | Update student | Student JSON | Updated student or 404 |
+| DELETE | `/api/v1/students/{id}` | Delete student | - | 204 No Content or 404 |
 
 ## Student Object Structure
 
@@ -107,7 +107,7 @@ http://localhost:8080
 
 ### Create a Student
 ```bash
-curl -X POST http://localhost:8080/api/students \
+curl -X POST http://localhost:8080/api/v1/students \
   -H "Content-Type: application/json" \
   -d '{
     "firstName": "Alice",
@@ -121,17 +121,17 @@ curl -X POST http://localhost:8080/api/students \
 
 ### Get All Students
 ```bash
-curl http://localhost:8080/api/students
+curl http://localhost:8080/api/v1/students
 ```
 
 ### Get Student by ID
 ```bash
-curl http://localhost:8080/api/students/1
+curl http://localhost:8080/api/v1/students/1
 ```
 
 ### Update Student
 ```bash
-curl -X PUT http://localhost:8080/api/students/1 \
+curl -X PUT http://localhost:8080/api/v1/students/1 \
   -H "Content-Type: application/json" \
   -d '{
     "firstName": "Alice",
@@ -145,7 +145,7 @@ curl -X PUT http://localhost:8080/api/students/1 \
 
 ### Delete Student
 ```bash
-curl -X DELETE http://localhost:8080/api/students/1
+curl -X DELETE http://localhost:8080/api/v1/students/1
 ```
 
 ## Error Handling
